@@ -1,12 +1,12 @@
 [user]
-  name = David Rouchy
-  email = drouchy@gmail.com
+  name = Kajetan Bojko
+  email = kai@shutl.co.uk
 
 [merge]
         keepBackup = false
         tool = vimdiff
 [core]
-	editor = vim 
+  editor = vim
 
 [alias]
   lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(blue)<%an>%Creset' --abbrev-commit --date=relative"
@@ -31,4 +31,4 @@
   stepback = reset --hard HEAD~1
   search = log --oneline --grep
 [color]
-	ui = true
+  ui = true
