@@ -1,0 +1,59 @@
+#!/usr/bin/ruby
+
+projects = {
+  'quote_service' => %w(specqs vimqs qsc qss),
+  'admin_portal'  => %w(specap vimap apc apc qss)
+}
+
+tabs = {
+  'spec'   => ['spec',  '~/shutl',  ''],
+
+  'specqs' => ['spec',  '~/shutl/quote_service',  ''],
+  'specap' => ['spec',  '~/shutl/admin_portal',  ''],
+
+  'vim'    => ['vim',    '~/shutl', 'vim'],
+  'vimqs'  => ['vim-qs', '~/shutl/quote_service', 'vim'],
+  'vimap'  => ['vim-ap', '~/shutl/admin_portal',  'vim'],
+
+  'aps'    => ['admin-portal-server',  '~/shutl/admin_portal',  'bundle exec rails server -p3000 --debugger'],
+  'apc'    => ['admin-portal-console', '~/shutl/admin_portal',  'bundle exec rails console'],
+
+  'qss'    => ['quote-service-server', '~/shutl/quote_service', 'bundle exec mizuno'],
+  'qsc'    => ['quote-service-console', '~/shutl/quote_service', 'be irb -I app -r app/quote_service.rb -r spec/support/neo4j_helper_methods.rb'],
+
+  'argoss' => ['argos-server',  '~/shutl/argos',  'bundle exec rails server -p3000 --debugger'],
+  'argosc' => ['argos-console', '~/shutl/argos',  'bundle exec rails console'],
+
+  'cps' => ['core-platform-server',  '~/shutl/core_platform',  'bundle exec rails server -p3001 --debugger'],
+  'cpc' => ['core-platform-console', '~/shutl/core_platform',  'bundle exec rails console'],
+
+  'redis' => ['redis', '~/shutl', 'redis-server ~/redis.conf; redis-cli'],
+  'mysql' => ['MySQL', '~/shutl', 'mysql -uroot'],
+}
+
+def run_command(window_name, command)
+  `tmux send-keys -t '#{window_name}' '#{command}' C-j`
+end
+
+def new_tab name, path, command
+  `tmux new-window -d -n '#{name}'`
+
+  run_command name, "cd #{path}"
+  run_command name, command
+end
+
+a = ARGV[0]
+
+if projects.keys.include?(a)
+  projects[a].each do |tab|
+    new_tab *tabs[tab]
+  end
+elsif tabs.keys.include?(a)
+  new_tab *tabs[a]
+else
+  puts 'USAGE'
+  puts '  tm [project|tab]'
+  puts
+  puts "projects: #{projects.keys.join(', ')}"
+  puts "tabs: #{tabs.keys.join(', ')}"
+end

@@ -186,8 +186,6 @@ au BufNewFile,BufRead *.coffee                                               set
 set backupdir=/tmp
 set directory=/tmp
 
-cd ~/shutl
-
 nmap _t} /dodwi{ $ciw}0
 
 set clipboard=unnamed
