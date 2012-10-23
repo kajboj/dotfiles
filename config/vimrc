@@ -103,8 +103,7 @@ set ignorecase
 
 "set grepprg=grep\ -nriH\ --exclude=tmp\ --exclude=.git\ --exclude=*.swp\ --exclude=*.log\ $*\ /dev/null
 
-" ack does not seem to work correctly with settings below. investigate
-set grepprg=ack\ --ignore-dir=doc\ $*\ /dev/null
+set grepprg=ack
 
 " Remapping of window navigation commands as they are used a lot
 " and constant pressing <C-w> puts a lot of stress on hands
