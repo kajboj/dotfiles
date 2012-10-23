@@ -24,7 +24,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rails git sublime ruby bundler rbenv vagrant pow svn rails3 zsh-syntax-highlighting custom-git)
+plugins=(rails git ruby bundler rbenv rails3 zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -37,3 +37,5 @@ fi
 alias git='nocorrect git'
 
 eval "$(rbenv init -)"
+
+export JRUBY_OPTS=--1.9
