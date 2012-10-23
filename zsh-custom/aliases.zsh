@@ -45,3 +45,16 @@ function run_bundler_cmd () {
 for cmd in $bundle_commands; do
   alias $cmd="run_bundler_cmd $cmd"
 done
+
+#git
+alias gs='git status'
+alias gd='git diff --ignore-space-change '
+alias gl='git log '
+alias glp='git log -p'
+alias ga='git add '
+alias gdc='git diff --cached'
+alias gc='git commit -v -m '
+
+alias gpl='git pull --rebase'
+alias grc='git rebase --continue'
+alias gpo='git push origin '
