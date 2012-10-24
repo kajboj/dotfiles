@@ -57,7 +57,7 @@ function! s:nonGuiSetup()
   "set t_AB=[48;5;%dm
   "set t_AF=[38;5;%dm
 
-  colorscheme Tomorrow-Night
+  colorscheme railscasts-console
 endfunction
 
 if has("gui_running")
