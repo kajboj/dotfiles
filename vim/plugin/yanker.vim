@@ -1,3 +1,5 @@
+let s:reg = '*'
+
 let s:prefixes = {
       \"spec.*_spec.rb"       : "be rspec",
       \"features.*feature"    : "be cucumber"}
@@ -13,11 +15,11 @@ function! s:Prefix()
 endfunction
 
 function! YankWithPrefix()
-  call system("tmux send-keys -t 'spec' '" . s:Prefix() . expand("%") . "' C-j" )
+  call setreg(s:reg, s:Prefix() . expand("%"))
 endfunction
 
 function! YankWithPrefixAndLineNumber()
-  call system("tmux send-keys -t 'spec' '" . s:Prefix() . expand("%") . ":" . line(".") . "' C-j" )
+  call setreg(s:reg, s:Prefix() . expand("%") . ":" . line("."))
 endfunction
 
 map _ys :call YankWithPrefix()<CR>

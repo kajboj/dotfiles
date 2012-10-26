@@ -42,3 +42,7 @@ export PATH=/Users/kajboj/dotfiles/scripts/tmux:$PATH
 
 export JAVA_OPTS="-d32 -Xms1024M -Xmx1024M"
 export JRUBY_OPTS="--1.9 -X-C"
+
+alias jrspec='jruby --debug -S rspec --debugger'
+
+source ~/.aliases
