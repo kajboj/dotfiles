@@ -36,7 +36,7 @@ hi Visual                    guibg=#5A647E
 " Folds
 " -----
 " line used for closed folds
-hi Folded                    guifg=#F6F3E8 guibg=#444444 gui=NONE
+hi Folded                    guifg=#666666 guibg=#282828 gui=NONE
 
 " Misc
 " ----
