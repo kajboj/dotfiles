@@ -58,3 +58,11 @@ alias gc='git commit -v -m '
 alias gpl='git pull --rebase'
 alias grc='git rebase --continue'
 alias gpo='git push origin '
+
+alias jrspec='bundle exec jruby --debug -S rspec --debugger '
+
+alias sem='open -a Google\ Chrome https://semaphoreapp.com/projects'
+alias piv='open -a Google\ Chrome https://www.pivotaltracker.com/projects/417005'
+alias wiki='open -a Google\ Chrome https://github.com/shutl/docs/wiki/'
+
+alias servers='osascript ~/tmp/servers'

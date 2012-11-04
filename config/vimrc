@@ -190,3 +190,9 @@ set clipboard=unnamed
 nmap _qs :cd ~/shutl/quote_service<CR>:e .<CR>
 nmap _ap :cd ~/shutl/admin_portal<CR>:e .<CR>
 nmap _au :cd ~/shutl/authentication_service<CR>:e .<CR>
+
+"let b:vimpipe_command= "JRUBY_OPTS='--1.9 -X-C' bundle exec rspec " . expand('%')
+
+set nostartofline
+
+nmap _r :w <CR> :!tmux send-keys -t 0:ghc.1 C-l ':r' C-j C-p C-p C-j<CR><CR>
