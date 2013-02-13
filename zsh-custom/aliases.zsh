@@ -66,3 +66,7 @@ alias piv='open -a Google\ Chrome https://www.pivotaltracker.com/projects/417005
 alias wiki='open -a Google\ Chrome https://github.com/shutl/docs/wiki/'
 
 alias servers='osascript ~/tmp/servers'
+
+alias pulls='/Users/kajboj/code/dotfiles/scripts/pulls'
+
+alias tags='ctags -R --exclude=.git --exclude=log *'

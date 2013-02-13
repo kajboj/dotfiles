@@ -1,1 +1,5 @@
 --color
+--tty
+--color
+--debug
+--order random

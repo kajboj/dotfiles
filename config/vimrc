@@ -103,7 +103,8 @@ set ignorecase
 
 "set grepprg=grep\ -nriH\ --exclude=tmp\ --exclude=.git\ --exclude=*.swp\ --exclude=*.log\ $*\ /dev/null
 
-set grepprg=ack
+set grepprg=ack\ $*\ /dev/null
+"set grepprg=ack
 
 " Remapping of window navigation commands as they are used a lot
 " and constant pressing <C-w> puts a lot of stress on hands
@@ -135,6 +136,7 @@ map <F5> :w<Enter>
 
 " Wrapping selected text in #{} (ruby string interpolation)
 vmap _si s}i#<ESC>l%l
+nmap _wi viws}i#
 
 " Changing " to '
 map _q cs"'
@@ -190,9 +192,12 @@ set clipboard=unnamed
 nmap _qs :cd ~/shutl/quote_service<CR>:e .<CR>
 nmap _ap :cd ~/shutl/admin_portal<CR>:e .<CR>
 nmap _au :cd ~/shutl/authentication_service<CR>:e .<CR>
+nmap _bs :cd ~/shutl/booking_service<CR>:e .<CR>
 
 "let b:vimpipe_command= "JRUBY_OPTS='--1.9 -X-C' bundle exec rspec " . expand('%')
 
 set nostartofline
 
 nmap _r :w <CR> :!tmux send-keys -t 0:ghc.1 C-l ':r' C-j C-p C-p C-j<CR><CR>
+
+nmap ,f :FufCoverageFile<CR>
