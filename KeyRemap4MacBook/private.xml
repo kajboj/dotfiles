@@ -10,6 +10,7 @@
         <appendix>[J+Space] to _</appendix>
         <identifier>remap.simultaneous_by_kai_right_wrist_relief</identifier>
         <autogen>--SimultaneousKeyPresses-- KeyCode::J, KeyCode::K, KeyCode::DELETE</autogen>
+        <autogen>--SimultaneousKeyPresses-- KeyCode::J, KeyCode::F, KeyCode::RETURN</autogen>
         <autogen>--SimultaneousKeyPresses-- KeyCode::J, KeyCode::SPACE, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
 
         <autogen>--SimultaneousKeyPresses-- KeyCode::J, KeyCode::Q, KeyCode::Q, ModifierFlag::CONTROL_R</autogen>
@@ -19,7 +20,6 @@
         <autogen>--SimultaneousKeyPresses-- KeyCode::J, KeyCode::T, KeyCode::T, ModifierFlag::CONTROL_R</autogen>
         <autogen>--SimultaneousKeyPresses-- KeyCode::J, KeyCode::A, KeyCode::A, ModifierFlag::CONTROL_R</autogen>
         <autogen>--SimultaneousKeyPresses-- KeyCode::J, KeyCode::S, KeyCode::S, ModifierFlag::CONTROL_R</autogen>
-        <autogen>--SimultaneousKeyPresses-- KeyCode::J, KeyCode::D, KeyCode::D, ModifierFlag::CONTROL_R</autogen>
         <autogen>--SimultaneousKeyPresses-- KeyCode::J, KeyCode::G, KeyCode::G, ModifierFlag::CONTROL_R</autogen>
         <autogen>--SimultaneousKeyPresses-- KeyCode::J, KeyCode::Z, KeyCode::Z, ModifierFlag::CONTROL_R</autogen>
         <autogen>--SimultaneousKeyPresses-- KeyCode::J, KeyCode::X, KeyCode::X, ModifierFlag::CONTROL_R</autogen>
